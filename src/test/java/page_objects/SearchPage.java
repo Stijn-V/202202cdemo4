@@ -3,6 +3,7 @@ package page_objects;
 import logger.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.devtools.v85.page.Page;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import page_objects.helpers.PageActions;
@@ -45,5 +46,10 @@ public class SearchPage {
 
     public static void verifyMessage(String messageText) {
        PageActions.assertElementText(message, messageText);
+    }
+
+    public static void viewProductDetail() {
+        PageActions.assertElementPresent(result);
+        PageActions.click(result);
     }
 }

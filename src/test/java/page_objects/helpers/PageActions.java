@@ -24,4 +24,8 @@ public class PageActions {
         Logger.info("reference text: " + expectedText);
         Assertions.assertTrue(element.getText().equalsIgnoreCase(expectedText));
     }
+
+    public static void assertElementValue(WebElement element, String expectedValue) {
+        Assertions.assertTrue(element.getAttribute("value").equalsIgnoreCase(expectedValue));
+    }
 }
