@@ -73,7 +73,6 @@ public class WebDriverManager {
 
 
     public void removeWebDriver() {
-        driver.close();
         driver.quit();
         driver = null;
     }
